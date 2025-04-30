@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { getAkeneoToken } from "./api/akeneoService";
+import { getToken } from "./api/akeneoService";
 
 function App() {
-  const [token, setToken] = useState<string>("");
+  const [token, setToken] = useState<string>("No");
 
   useEffect(() => {
     const fetchToken = async () => {
-      const res: string = await getAkeneoToken();
-      setToken(res);
+      const res = await getToken();
+      setToken(res?.access_token);
     };
     fetchToken();
   }, []);
 
-  console.log("TOken Kitti", token);
+  console.log({ token });
 
   return (
     <>
