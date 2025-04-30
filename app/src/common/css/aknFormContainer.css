@@ -1,0 +1,32 @@
+.AknFormContainer {
+  width: 460px;
+  z-index: 1;
+}
+.AknFormContainer--large {
+  width: 710px;
+}
+.AknFormContainer--small {
+  width: 300px;
+}
+.AknFormContainer--wide {
+  width: 100%;
+}
+.AknFormContainer--withPadding:not(:empty):not(.AknFormContainer--centered) {
+  margin: 20px 0 10px;
+}
+.AknFormContainer--withPadding:not(:empty).AknFormContainer--centered {
+  margin-bottom: 20px;
+}
+.AknFormContainer--withSmallPadding:not(:empty) {
+  padding: 0 20px;
+}
+.AknFormContainer--centered {
+  margin: auto;
+}
+.AknFormContainer--expanded {
+  max-width: 920px;
+  width: 100%;
+}
+.AknFormContainer--inline {
+  width: auto;
+}
