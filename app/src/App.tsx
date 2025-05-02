@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
-import {
-  AnimateMessageBar,
-  InfoRoundIcon,
-  MessageBar,
-  ProductsIllustration,
-  TextInput,
-} from "akeneo-design-system";
+import { ProductsIllustration, TextInput } from "akeneo-design-system";
 import { CopyRequestBody } from "./common/lib/types";
 import { copyContent, getToken } from "./api/akeneoService";
 
@@ -46,7 +39,7 @@ function App() {
       setInputSku("");
       console.log("Data Updated");
     } else {
-      console.log("Entho preshnm ind");
+      console.log("Data update Error");
     }
   };
 
