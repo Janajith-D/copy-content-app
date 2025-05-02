@@ -1,0 +1,181 @@
+.AknFieldContainer {
+  margin-bottom: 20px;
+  position: relative;
+}
+.AknFieldContainer--packed {
+  margin-bottom: 5px;
+}
+.AknFieldContainer--packed:first-of-type {
+  margin-top: 20px;
+}
+.AknFieldContainer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.AknFieldContainer-header--light {
+  margin-bottom: 1px;
+  max-width: 456px;
+}
+.AknFieldContainer-header--light .AknFieldContainer-label {
+  font-size: 13px;
+  color: #a1a9b7;
+}
+.AknFieldContainer-label {
+  color: #67768a;
+  flex-grow: 1;
+  font-size: 13px;
+  display: flex;
+}
+.AknFieldContainer-label--grey {
+  color: #a1a9b7;
+  font-size: 10px;
+}
+.AknFieldContainer-label--inline {
+  color: #11324d;
+}
+.AknFieldContainer-label--withImage {
+  display: flex;
+  font-size: 13px;
+  align-items: flex-end;
+  line-height: 13px;
+}
+.AknFieldContainer-label--right {
+  margin-left: 10px;
+}
+.AknFieldContainer-label .AknFieldContainer-labelAnnotation:not(:empty) {
+  margin-right: 3px;
+}
+.AknFieldContainer-label
+  .AknFieldContainer-labelAnnotation:not(:empty):not(:first-child) {
+  margin-left: 3px;
+}
+.AknFieldContainer-labelImage {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.AknFieldContainer-unavailable {
+  color: #9faab8;
+}
+.AknFieldContainer-clickable {
+  color: #9faab8;
+  cursor: pointer;
+}
+.AknFieldContainer-clickable:hover {
+  text-decoration: underline;
+}
+.AknFieldContainer-footer {
+  color: #9faab8;
+  font-size: 11px;
+}
+.AknFieldContainer-footerGuidelines {
+  white-space: break-spaces;
+}
+.AknFieldContainer-inputContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.AknFieldContainer-inputLink {
+  margin-left: 4px;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.AknFieldContainer-inputSides {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.AknFieldContainer-subContainer {
+  position: relative;
+  flex-grow: 10000;
+}
+.AknFieldContainer-subContainer-multiSelect {
+  min-height: 45px;
+}
+.AknFieldContainer-subContainer-simpleSelect {
+  height: 40px;
+}
+.AknFieldContainer-iconsContainer {
+  padding-top: 4px;
+  min-width: 24px;
+  margin-left: 5px;
+}
+.AknFieldContainer-contextContainer {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.AknFieldContainer-validationErrors {
+  display: flex;
+  flex-direction: column;
+}
+.AknFieldContainer-validationErrors > span:first-child {
+  white-space: nowrap;
+}
+.AknFieldContainer-validationError {
+  display: flex;
+  align-items: baseline;
+  margin-top: 3px;
+  color: #d4604f;
+  background: url("/bundles/pimui/images/icon-danger.svg") no-repeat left center;
+  padding-left: 26px;
+  background-size: 20px;
+  background-position: top left;
+}
+.AknFieldContainer-validationWarning {
+  display: flex;
+  align-items: baseline;
+  margin-top: 3px;
+  color: #11324d;
+  background: url("/bundles/pimui/images/icon-danger-orange.svg") no-repeat left
+    center;
+  padding-left: 26px;
+  background-size: 20px;
+  background-position: top left;
+}
+.AknFieldContainer-multilineValidationWarning {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  color: #11324d;
+  white-space: normal;
+  line-height: 15px;
+}
+.AknFieldContainer-iconValidationWarning {
+  background: url("/bundles/pimui/images/icon-danger-orange.svg") no-repeat left
+    center;
+  background-size: 20px;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.AknFieldContainer-validationWarningMessage {
+  color: #67768a;
+}
+.AknFieldContainer--withoutMargin {
+  margin-bottom: 0;
+}
+.AknFieldContainer--hidden {
+  display: none;
+}
+.AknFieldContainer--inline {
+  display: flex;
+  min-height: 40px;
+}
+.AknFieldContainer--inline .AknFieldContainer-inputContainer {
+  width: 350px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.AknFieldContainer--inline .AknFieldContainer-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 10px;
+}
+.AknFieldContainer--big {
+  width: 920px;
+}

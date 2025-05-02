@@ -1,0 +1,200 @@
+.AknFullPage {
+  position: absolute;
+  width: 95vw;
+  height: 75vh;
+  top: 0;
+  left: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1040;
+  overflow: hidden;
+  align-items: center;
+  padding: 20px 0;
+}
+.AknFullPage--withBottom {
+  height: calc(100vh - 110px);
+}
+.AknFullPage--fixedWidth .AknFullPage-content {
+  padding-left: calc((100vw - 1080px) / 2);
+  padding-right: calc((100vw - 1080px) / 2);
+}
+.AknFullPage--full {
+  justify-content: flex-start;
+}
+.AknFullPage-titleContainer {
+  margin-bottom: 30px;
+}
+.AknFullPage--full .AknFullPage-content {
+  flex-grow: 1;
+}
+.AknFullPage-content {
+  max-height: 100vh;
+  overflow-x: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: -20px 80px;
+  padding: 20px 0;
+}
+.AknFullPage-content--withIllustration {
+  margin: 0 80px;
+  flex-direction: row;
+  justify-content: center;
+}
+.AknFullPage-content--withIllustration > :nth-child(1) {
+  text-align: right;
+  border-right: 2px solid #9452ba;
+  padding-right: 40px;
+  width: calc((100vw - 160px) / 3);
+}
+.AknFullPage-content--withIllustration > :nth-child(2) {
+  padding: 20px 0 20px 40px;
+  width: calc((100vw - 160px) / 3 * 2);
+}
+.AknFullPage-cancel {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 32px;
+  height: 32px;
+  background: url("/bundles/pimui/images/icon-delete-slategrey.svg") no-repeat
+    50% 50%;
+  cursor: pointer;
+  border: none;
+  z-index: 1050;
+  font-size: 0;
+}
+.AknFullPage-previous {
+  position: absolute;
+  top: 24px;
+  left: 64px;
+  z-index: 1050;
+}
+.AknFullPage-subTitle {
+  color: #9452ba;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+.AknFullPage-title {
+  font-size: 30px;
+  line-height: 1.4;
+  color: #11324d;
+}
+.AknFullPage-title--highlight {
+  color: #9452ba;
+}
+.AknFullPage-subTitle,
+.AknFullPage-title,
+.AknFullPage-description {
+  text-align: center;
+}
+.AknFullPage-content--withIllustration .AknFullPage-subTitle,
+.AknFullPage-content--withIllustration .AknFullPage-title,
+.AknFullPage-content--withIllustration .AknFullPage-description {
+  text-align: left;
+}
+.AknFullPage-description {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.AknFullPage-description--bottom {
+  margin-bottom: 30px;
+}
+.AknFullPage-ok {
+  position: fixed;
+  z-index: 1050;
+  right: 20px;
+  top: 20px;
+}
+.AknFullPage-state {
+  position: fixed;
+  right: 20px;
+  top: 60px;
+}
+.AknFullPage-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 24px;
+  height: 110px;
+  background: white;
+}
+.AknFullPage-illustration {
+  background-image: url("/bundles/pimui/images/illustrations/Attribute.svg");
+  background-size: 210px 210px;
+  height: 210px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.AknFullPage-illustration--api-connections {
+  background-image: url("/bundles/pimui/images/illustrations/Api.svg");
+}
+.AknFullPage-illustration--association-types {
+  background-image: url("/bundles/pimui/images/illustrations/Association-types.svg");
+}
+.AknFullPage-illustration--attributes {
+  background-image: url("/bundles/pimui/images/illustrations/Attribute.svg");
+}
+.AknFullPage-illustration--robot {
+  background-image: url("/bundles/pimui/images/illustrations/Robot.svg");
+}
+.AknFullPage-illustration--attribute-groups {
+  background-image: url("/bundles/pimui/images/illustrations/Attribute-groups.svg");
+}
+.AknFullPage-illustration--projects {
+  background-image: url("/bundles/pimui/images/illustrations/Project.svg");
+}
+.AknFullPage-illustration--products {
+  background-image: url("/bundles/pimui/images/illustrations/Product.svg");
+}
+.AknFullPage-illustration--product-models {
+  background-image: url("/bundles/pimui/images/illustrations/Product-model.svg");
+}
+.AknFullPage-illustration--product-model {
+  background-image: url("/bundles/pimui/images/illustrations/Product-model.svg");
+}
+.AknFullPage-illustration--delete {
+  background-image: url("/bundles/pimui/images/illustrations/Delete.svg");
+}
+.AknFullPage-illustration--assets,
+.AknFullPage-illustration--asset {
+  background-image: url("/bundles/pimui/images/illustrations/Asset.svg");
+}
+.AknFullPage-illustration--export-profiles {
+  background-image: url("/bundles/pimui/images/illustrations/Export.svg");
+}
+.AknFullPage-illustration--import-profiles {
+  background-image: url("/bundles/pimui/images/illustrations/Import.svg");
+}
+.AknFullPage-illustration--categories {
+  background-image: url("/bundles/pimui/images/illustrations/Product-categories.svg");
+}
+.AknFullPage-illustration--families {
+  background-image: url("/bundles/pimui/images/illustrations/Family.svg");
+}
+.AknFullPage-illustration--group,
+.AknFullPage-illustration--groups {
+  background-image: url("/bundles/pimui/images/illustrations/Groups.svg");
+}
+.AknFullPage-illustration--association {
+  background-image: url("/bundles/pimui/images/illustrations/Association-types.svg");
+}
+.AknFullPage-illustration--channels {
+  background-image: url("/bundles/pimui/images/illustrations/Channel.svg");
+}
+.AknFullPage-illustration--api {
+  background-image: url("/bundles/pimui/images/illustrations/Api.svg");
+}
+.AknFullPage-illustration--users {
+  background-image: url("/bundles/pimui/images/illustrations/User.svg");
+}
+.AknFullPage-illustration--roles {
+  background-image: url("/bundles/pimui/images/illustrations/User-roles.svg");
+}
+.AknFullPage-illustration--proposal {
+  background-image: url("/bundles/pimui/images/illustrations/Product.svg");
+}

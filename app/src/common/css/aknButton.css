@@ -1,0 +1,409 @@
+.AknButton {
+  background-color: white;
+  color: #67768a;
+  height: 32px;
+  line-height: 30px;
+  font-size: 15px;
+  min-width: 32px;
+  display: inline-block;
+  padding: 0 16px;
+  border-radius: 100px;
+  border: 1px solid #ccd1d8;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+  transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+  position: relative;
+  text-transform: uppercase;
+}
+.AknButton:hover,
+.AknButton--active {
+  background-color: #e6e6e6;
+  color: #515d6d;
+}
+.AknButton-icon {
+  margin: -4px -4px -7px 0;
+}
+.AknButton--disabled,
+.AknButton:disabled {
+  color: #9faab8;
+  border-color: #ffffff;
+  cursor: not-allowed;
+}
+.AknButton--delete {
+  background-color: transparent;
+  color: #d4604f;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.1s ease;
+  text-transform: none;
+  height: auto;
+  font-size: 11px;
+}
+.AknButton--delete:hover {
+  background-color: transparent;
+  color: #c1422f;
+}
+.AknButton--spaced {
+  margin-left: 10px;
+}
+.AknButton--apply {
+  background-color: #67b373;
+  border-color: #67b373;
+  color: white;
+}
+.AknButton--apply:hover,
+.AknButton--apply.AknButton--active {
+  background-color: #4d9a59;
+  border-color: #4d9a59;
+  color: white;
+}
+.AknButton--apply.AknButton--disabled,
+.AknButton--apply:disabled {
+  color: white;
+  background-color: #abd5b2;
+  border-color: #abd5b2;
+  cursor: not-allowed;
+}
+.AknButton-animatedIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+.AknButton--grey {
+  background-color: #a1a9b7;
+  border-color: #a1a9b7;
+  color: white;
+}
+.AknButton--grey:hover,
+.AknButton--grey.AknButton--active {
+  background-color: #848fa1;
+  border-color: #848fa1;
+  color: white;
+}
+.AknButton--grey.AknButton--disabled,
+.AknButton--grey:disabled {
+  color: white;
+  background-color: #dbdee3;
+  border-color: #dbdee3;
+  cursor: not-allowed;
+}
+.AknButton--greyLight {
+  background-color: white;
+  border-color: #a1a9b7;
+  color: #a1a9b7;
+}
+.AknButton--greyLight:hover,
+.AknButton--greyLight.AknButton--active {
+  background-color: white;
+  border-color: #697589;
+  color: #697589;
+}
+.AknButton--greyLight.AknButton--disabled,
+.AknButton--greyLight:disabled {
+  background-color: white;
+  border-color: #dbdee3;
+  color: #dbdee3;
+  cursor: not-allowed;
+}
+.AknButton--slateGrey {
+  background-color: #67768a;
+  border-color: #67768a;
+  color: white;
+}
+.AknButton--slateGrey:hover,
+.AknButton--slateGrey.AknButton--active {
+  background-color: #515d6d;
+  border-color: #515d6d;
+  color: white;
+}
+.AknButton--slateGrey.AknButton--disabled,
+.AknButton--slateGrey:disabled {
+  color: white;
+  background-color: #9faab8;
+  border-color: #9faab8;
+  cursor: not-allowed;
+}
+.AknButton--important {
+  background-color: #d4604f;
+  border-color: #d4604f;
+  color: white;
+}
+.AknButton--important:hover,
+.AknButton--important.AknButton--active {
+  background-color: #c1422f;
+  border-color: #c1422f;
+  color: white;
+}
+.AknButton--important.AknButton--disabled,
+.AknButton--important:disabled {
+  color: white;
+  background-color: #e8aaa1;
+  border-color: #e8aaa1;
+  cursor: not-allowed;
+}
+.AknButton--action {
+  background-color: #5992c7;
+  border-color: #5992c7;
+  color: white;
+}
+.AknButton--action:hover,
+.AknButton--action.AknButton--active {
+  background-color: #3c79b1;
+  border-color: #3c79b1;
+  color: white;
+}
+.AknButton--action.AknButton--disabled,
+.AknButton--action:disabled {
+  color: white;
+  background-color: #a5c4e1;
+  border-color: #a5c4e1;
+  cursor: not-allowed;
+}
+.AknButton--big {
+  height: 38px;
+  line-height: calc(38px - 2px);
+  min-width: 38px;
+  font-size: 15px;
+}
+.AknButton--small {
+  height: 30px;
+  line-height: calc(30px - 2px);
+  min-width: 30px;
+  font-size: 13px;
+}
+.AknButton--micro {
+  height: 24px;
+  line-height: calc(24px - 2px);
+  min-width: 24px;
+  font-size: 13px;
+}
+.AknButton--nano {
+  height: 22px;
+  line-height: calc(22px - 2px);
+  min-width: auto;
+  font-size: 11px;
+  padding: 0 11px;
+}
+.AknButton--noLeftRadius {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.AknButton--hidden {
+  display: none;
+}
+.AknButton--disabled:focus,
+.AknButton:disabled:focus {
+  outline: -webkit-focus-ring-color auto 0;
+}
+.AknButton--glued:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+.AknButton--glued:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.AknButton--centered {
+  display: block;
+  margin: auto;
+}
+.AknButton--dropdown {
+  background-image: url("/bundles/pimui/images/icon-down-white.svg");
+  background-repeat: no-repeat;
+  background-position: 92% center;
+  background-size: 20px;
+  padding-right: 34px;
+}
+.AknButton-squareIcon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  background-size: 100%;
+  margin: 5px auto 10px;
+  cursor: pointer;
+}
+.AknButton-squareIcon--small {
+  width: 22px;
+  height: 22px;
+}
+.AknButton-squareIcon--id {
+  background-image: url("/bundles/pimui/images/attribute/icon-id.svg");
+}
+.AknButton-squareIcon--text {
+  background-image: url("/bundles/pimui/images/attribute/icon-text.svg");
+}
+.AknButton-squareIcon--textarea {
+  background-image: url("/bundles/pimui/images/attribute/icon-textarea.svg");
+}
+.AknButton-squareIcon--number {
+  background-image: url("/bundles/pimui/images/attribute/icon-number.svg");
+}
+.AknButton-squareIcon--price {
+  background-image: url("/bundles/pimui/images/attribute/icon-price.svg");
+}
+.AknButton-squareIcon--multiselect {
+  background-image: url("/bundles/pimui/images/attribute/icon-multiselect.svg");
+}
+.AknButton-squareIcon--select {
+  background-image: url("/bundles/pimui/images/attribute/icon-select.svg");
+}
+.AknButton-squareIcon--file {
+  background-image: url("/bundles/pimui/images/attribute/icon-file.svg");
+}
+.AknButton-squareIcon--asset {
+  background-image: url("/bundles/pimui/images/attribute/icon-asset.svg");
+}
+.AknButton-squareIcon--switch {
+  background-image: url("/bundles/pimui/images/attribute/icon-switch.svg");
+}
+.AknButton-squareIcon--date {
+  background-image: url("/bundles/pimui/images/attribute/icon-date.svg");
+}
+.AknButton-squareIcon--metric {
+  background-image: url("/bundles/pimui/images/attribute/icon-metric.svg");
+}
+.AknButton-squareIcon--assetCollection {
+  background-image: url("/bundles/pimui/images/attribute/icon-assetCollection.svg");
+}
+.AknButton-squareIcon--asset-collection {
+  background-image: url("/bundles/pimui/images/attribute/icon-asset-collection.svg");
+}
+.AknButton-squareIcon--reference-entity {
+  background-image: url("/bundles/pimui/images/attribute/icon-reference-entity.svg");
+}
+.AknButton-squareIcon--reference-entity-multiple {
+  background-image: url("/bundles/pimui/images/attribute/icon-reference-entity-multiple.svg");
+}
+.AknButton-squareIcon--delete {
+  background-image: url("/bundles/pimui/images/icon-delete-white.svg");
+}
+.AknButton-squareIcon--dismiss {
+  background-image: url("/bundles/pimui/images/icon-delete-slategrey.svg");
+}
+.AknButton-squareIcon--validate {
+  background-image: url("/bundles/pimui/images/icon-check-green.svg");
+}
+.AknButton-squareIcon.AknButton--micro {
+  background-position: center;
+  background-size: 75%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-repeat: no-repeat;
+}
+.AknButton--asIcon {
+  margin-top: -4px;
+  margin-left: 10px;
+}
+.AknButton--round {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+.AknButton--ghost {
+  padding: 0 15px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 13px;
+  border: 1px solid #d9dde2;
+  color: #67768a;
+}
+.AknButton--ghost:hover {
+  border: 1px solid #a1a9b7;
+}
+.AknButton--ghost:active {
+  border: 1px solid #67768a;
+  background: #d9dde2;
+}
+.AknButton--withSuffix {
+  margin-left: 20px;
+}
+.AknButton--withSuffix::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  height: 22px;
+  border-left: 1px solid white;
+  transform: translateX(-10px);
+}
+.AknButtonList {
+  display: flex;
+  align-items: center;
+  margin-right: -10px;
+}
+.AknButtonList-item {
+  margin-right: 10px;
+}
+.AknButtonList-item--hide,
+.AknButtonList-item.disabled {
+  display: none;
+}
+.AknButtonList-item--transparent {
+  visibility: hidden;
+}
+.AknButtonList--hide {
+  display: none;
+}
+.AknButtonList--wrap {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.AknButtonList--wrap :first-child {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.AknButtonList--right {
+  justify-content: flex-end;
+  margin-right: 0;
+  margin-left: -10px;
+}
+.AknButtonList--right .AknButtonList-item {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.AknButtonList--centered {
+  justify-content: center;
+}
+.AknButtonList--centered .AknButtonList-item {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.AknButtonList--twoColumns {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.AknButtonList--twoColumns .AknButtonList-item {
+  margin-left: 0;
+  margin-right: 0;
+  flex-basis: calc(50% - 5px);
+  margin-bottom: 10px;
+}
+.AknButtonList--single {
+  padding-top: 20px;
+}
+.AknButtonList--vertical {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.AknButtonList--vertical .AknButtonList-item:not(:first-child) {
+  margin-top: 10px;
+}
+.AknButtonList--expanded {
+  margin-right: -20px;
+}
+.AknButtonList--expanded .AknButtonList-item {
+  margin-right: 20px;
+}
+.AknButtonList--expanded.AknButtonList--right {
+  margin-right: 0;
+  margin-left: -20px;
+}
+.AknButtonList--expanded.AknButtonList--right .AknButtonList-item {
+  margin-right: 0;
+}

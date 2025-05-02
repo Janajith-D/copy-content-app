@@ -1,0 +1,117 @@
+.AknTextField {
+  height: 40px;
+  line-height: 40px;
+  color: #11324d;
+  border: 1px solid #ccd1d8;
+  width: 100%;
+  border-radius: 2px;
+  padding: 0 8px;
+  z-index: 1;
+}
+.AknTextField-layer {
+  border: 1px solid #ccd1d8;
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+}
+.AknTextField-layer--first {
+  top: 4px;
+  left: 4px;
+}
+.AknTextField-layer--second {
+  top: 2px;
+  left: 2px;
+}
+.AknTextField--noRightRadius {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+.AknTextField--noLeftRadius {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.AknTextField--noRadius {
+  border-radius: 0;
+}
+.AknTextField--withDashedBottomBorder {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px dashed #d9dde2;
+}
+.AknTextField--withRightButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1px;
+}
+.AknTextField--select2 {
+  padding: 0;
+  border: none;
+  height: auto;
+}
+.AknTextField--fileDropZone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+}
+.AknTextField--transparent {
+  background: none;
+  border: none;
+}
+.AknTextField--file {
+  color: transparent;
+  height: 140px;
+  margin-top: -30px;
+}
+.AknTextField--narrow {
+  width: 460px;
+}
+.AknTextField--disabled:not(.AknTextField--light),
+.AknTextField[readonly]:not(.AknTextField--light),
+.AknTextField[disabled]:not(.AknTextField--light) {
+  background: #e9ebee;
+  background-image: url("/bundles/pimui/images/icon-lock.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
+  padding-right: 36px;
+  color: #9faab8;
+  cursor: not-allowed;
+}
+.AknTextField--light {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #d9dde2;
+  border-radius: 0;
+  padding: 0;
+  font-size: 15px;
+  background: #fff;
+}
+.AknTextField--light:focus {
+  outline: none;
+  border-color: #5992c7;
+}
+.AknTextField--light.AknTextField--disabled {
+  border-bottom: 1px dotted #d9dde2;
+  background-image: url("/bundles/pimui/images/icon-lock2.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: calc(100% - 12px) center;
+  padding-right: 36px;
+  color: #a1a9b7;
+  cursor: not-allowed;
+}
+.AknTextField--localizable {
+  width: calc(100% - 4px);
+  position: relative;
+}
+.AknTextField--localizable.AknTextField--narrow {
+  width: 456px;
+}
