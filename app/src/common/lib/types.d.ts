@@ -6,6 +6,11 @@ export interface TokenResponse {
   refresh_token: string;
 }
 
+export interface CopyRequestBody {
+  source: string;
+  dest: string;
+}
+
 export interface ProductDetails {
   uuid: string;
   identifier: string;
