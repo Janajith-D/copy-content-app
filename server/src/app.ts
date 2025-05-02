@@ -15,8 +15,11 @@ app.use(express.json());
 // CORS middleware
 app.use(
   cors({
-    origin: "http://localhost:5173", // Replace with your React app's URL
-    methods: ["POST", "GET"],
+    origin: [
+      "http://localhost:5173",
+      "https://witty-fresh-beetle.ngrok-free.app",
+    ], // Replace with your React app's URL
+    methods: ["POST", "GET", "PATCH"],
     // credentials: true, // Optional: if using cookies or Authorization headers
   })
 );
@@ -56,8 +59,13 @@ app.post("/api/v1/copy", async (req, res) => {
   const source = req.body?.source ?? "";
   const dest = req.body?.dest ?? "";
 
+  const authHeader = req.headers["authorization"];
+  const token: string = authHeader?.startsWith("Bearer ")
+    ? authHeader.split(" ")[1]
+    : "OGJhZDA4YTIxYTFkZDE0YTRiNzk5ZmExYmJkMjY2YWUzZGQyYmU1YjkwMmQ1MmRiNDFhZTZmYjhlMmY1YzFiYQ";
+
   try {
-    const data = await copyProductContent(source, dest);
+    const data = await copyProductContent(source, dest, token);
     res.json(data);
   } catch (error) {
     console.error("Content Copy Error:", error);

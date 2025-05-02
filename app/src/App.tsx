@@ -1,25 +1,28 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-import { ProductsIllustration, TextInput } from "akeneo-design-system";
+import {
+  AnimateMessageBar,
+  InfoRoundIcon,
+  MessageBar,
+  ProductsIllustration,
+  TextInput,
+} from "akeneo-design-system";
 import { CopyRequestBody } from "./common/lib/types";
-import { copyContent } from "./api/akeneoService";
+import { copyContent, getToken } from "./api/akeneoService";
 
 function App() {
   const [inputSku, setInputSku] = useState<string>("");
   const [manualSku, setManualSku] = useState<boolean>(false);
-  const [currentUuid, setCurrentUuid] = useState<string>("");
+  const [currentSku, setCurrentSku] = useState<string>("");
 
   // Extract UUID once on mount
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const match = RegExp(
-      /[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/i
-    ).exec(params.toString());
-    const uuid = match?.[0] ?? "";
+    const identifier = params.get("product[identifier]") ?? "";
 
-    setCurrentUuid(uuid);
-    setManualSku(uuid === "");
+    setCurrentSku(identifier);
+    setManualSku(identifier === "");
   }, []);
 
   const updateInputSku = (sku: string) => {
@@ -27,16 +30,18 @@ function App() {
   };
 
   const updateCurrentSku = (sku: string) => {
-    setCurrentUuid(sku);
+    setCurrentSku(sku);
   };
 
   const submitData = async () => {
+    const tokenData = await getToken();
+    const token: string = tokenData?.access_token;
     const data: CopyRequestBody = {
       source: inputSku,
-      dest: currentUuid,
+      dest: currentSku,
     };
 
-    const response = await copyContent(data);
+    const response = await copyContent(data, token);
     if (response === "ACCEPTED") {
       setInputSku("");
       console.log("Data Updated");
@@ -74,7 +79,7 @@ function App() {
                       className="AknTextField"
                       placeholder="Please enter the product SKU"
                       readOnly={!manualSku}
-                      value={manualSku ? inputSku : currentUuid}
+                      value={currentSku}
                       onChange={manualSku ? updateCurrentSku : undefined}
                     />
                   </div>

@@ -4,13 +4,10 @@ import {
   ProductUpdateResponse,
 } from "./lib/types";
 
-const getProductByIdentifier = async (id: string) => {
+const getProductByIdentifier = async (id: string, token: string) => {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append(
-    "Authorization",
-    "Bearer ZDlmY2Y3Yzk4YTA3NWYyOWY2NmE2ODQxOTUzMzgyNDUxZTJjMWNjYjI5NjI4YjM2MzgyMmM3NzA4NzIyMGEzNw"
-  );
+  myHeaders.append("Authorization", `Bearer ${token}`);
 
   const requestOptions = {
     method: "GET",
@@ -31,14 +28,13 @@ interface ValuesCollection {
 
 const updateProductDetails = async (
   requestBody: ValuesCollection,
-  uuid: string
+  uuid: string,
+  token: string
 ): Promise<ProductUpdateResponse> => {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append(
-    "Authorization",
-    "Bearer ZDlmY2Y3Yzk4YTA3NWYyOWY2NmE2ODQxOTUzMzgyNDUxZTJjMWNjYjI5NjI4YjM2MzgyMmM3NzA4NzIyMGEzNw"
-  );
+  myHeaders.append("Authorization", `Bearer ${token}`);
+
   const requestOptions = {
     method: "PATCH",
     headers: myHeaders,
@@ -61,9 +57,16 @@ const updateProductDetails = async (
   }
 };
 
-export default async function copyProductContent(source: string, dest: string) {
-  const sourceProduct: ProductDetails = await getProductByIdentifier(source);
-  const destProduct: ProductDetails = await getProductByIdentifier(dest);
+export default async function copyProductContent(
+  source: string,
+  dest: string,
+  token: string
+) {
+  const sourceProduct: ProductDetails = await getProductByIdentifier(
+    source,
+    token
+  );
+  const destProduct: ProductDetails = await getProductByIdentifier(dest, token);
 
   const ignoredAttributes = [
     "sku",
@@ -90,7 +93,8 @@ export default async function copyProductContent(source: string, dest: string) {
 
   const updateResponse = await updateProductDetails(
     requestBody,
-    destProduct?.uuid
+    destProduct?.uuid,
+    token
   );
 
   if (updateResponse?.code === 204) {

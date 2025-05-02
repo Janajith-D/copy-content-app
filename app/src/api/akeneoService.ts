@@ -16,7 +16,11 @@ export const getToken = async () => {
   return result;
 };
 
-export const copyContent = async (requestBody: CopyRequestBody) => {
+export const copyContent = async (
+  requestBody: CopyRequestBody,
+  token: string
+) => {
+  myHeaders.append("Authorization", token);
   const requestOptions = {
     method: "POST",
     headers: myHeaders,
