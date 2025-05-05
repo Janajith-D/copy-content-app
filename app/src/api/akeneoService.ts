@@ -3,7 +3,7 @@ import { CopyRequestBody, TokenResponse } from "../common/lib/types";
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-const host = import.meta.env.API_HOST ?? "localhost:3010";
+const host: string = import.meta.env.API_HOST ?? "localhost:3010";
 
 export const getToken = async () => {
   const requestOptions = {

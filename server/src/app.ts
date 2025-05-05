@@ -39,7 +39,7 @@ app.post("/api/v1/token", async (_req, res) => {
       password: password,
     });
 
-    const response = await fetch(`https://${host}/api/oauth/v1/token`, {
+    const response = await fetch(`${host}/api/oauth/v1/token`, {
       method: "POST",
       headers: myHeaders,
       body: raw,
@@ -61,7 +61,7 @@ app.post("/api/v1/copy", async (req, res) => {
   const authHeader = req.headers["authorization"];
   const token: string = authHeader?.startsWith("Bearer ")
     ? authHeader.split(" ")[1]
-    : "";
+    : authHeader;
 
   try {
     const data = await copyProductContent(source, dest, token);
