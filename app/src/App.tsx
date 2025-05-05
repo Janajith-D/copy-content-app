@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "./common/css/index.css";
 import { ProductsIllustration, TextInput } from "akeneo-design-system";
 import { CopyRequestBody } from "./common/lib/types";
 import { copyContent, getToken } from "./api/akeneoService";
