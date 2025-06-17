@@ -31,6 +31,10 @@ const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Authorization", `Basic ${client_Id}`);
 
+app.get("/hello", (req, res) => {
+  res.send("Hello");
+});
+
 app.post("/api/v1/token", async (_req, res) => {
   try {
     const raw = JSON.stringify({

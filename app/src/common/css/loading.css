@@ -1,0 +1,10 @@
+.loading-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  min-height: 60px;
+}
